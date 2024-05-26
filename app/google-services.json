@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "913307625811",
+    "project_id": "c-tecno-solution",
+    "storage_bucket": "c-tecno-solution.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913307625811:android:595ce066107374295799a6",
+        "android_client_info": {
+          "package_name": "com.example.c_tecno_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArqaZNWUzDh0fBfnNctdh3xdbZIC8N9HQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913307625811:android:b8c254083d0e669b5799a6",
+        "android_client_info": {
+          "package_name": "com.example.c_tecno_solution"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArqaZNWUzDh0fBfnNctdh3xdbZIC8N9HQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
