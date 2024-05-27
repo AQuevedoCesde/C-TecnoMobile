@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">C-Tecno-Mobile</string>
+    <string name="app_name">C-Tecno</string>
+    <string name="email">Ingresa tu email</string>
+    <string name="contra">Ingresa tu contraseña</string>
+    <string name="boton">Iniciar sesion</string>
+    <string name="linkrecovery">¿Olvidaste tu contraseña?</string>
+    <string name="nombre">Ingresa tu nombre </string>
+    <string name="apellido">Ingresa tu apellido </string>
+    <string name="progrma">Ingresa el programa</string>
+    <string name="telefono">Ingresa tu telefono </string>
+    <string name="emailReguistro">Ingresa tu Email </string>
+    <string name="contra1">Ingresa tu contraseña</string>
+    <string name="contra2">Repita tu contraseña </string>
 </resources>
