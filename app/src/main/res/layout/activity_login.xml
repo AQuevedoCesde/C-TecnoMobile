@@ -127,6 +127,7 @@
             android:id="@+id/txtOlvidar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="PasswordResert"
             android:hint="@string/linkrecovery"
             android:textColorHint="#757575"
             app:layout_constraintBottom_toBottomOf="parent"
