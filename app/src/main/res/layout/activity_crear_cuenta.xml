@@ -25,9 +25,9 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="153dp"
+        android:layout_width="174dp"
 
-        android:layout_height="185dp"
+        android:layout_height="212dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.935"
@@ -62,8 +62,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="366dp"
-        android:layout_height="565dp"
+        android:layout_width="377dp"
+        android:layout_height="585dp"
         android:background="@drawable/borde"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,9 +81,9 @@
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
-
                 android:layout_marginTop="50sp"
                 android:fontFamily="@font/zillaslab"
+                android:rotationX="4"
                 android:text="Nombres"
                 android:textSize="20sp" />
 
@@ -92,7 +92,6 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="15sp"
                 android:hint="@string/nombre" />
 
             <TextView
@@ -109,7 +108,6 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="15sp"
                 android:hint="@string/nombre" />
 
             <TextView
@@ -126,7 +124,6 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="15sp"
                 android:hint="@string/progrma" />
 
             <TextView
@@ -143,7 +140,6 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="15sp"
                 android:hint="@string/telefono" />
 
 
@@ -161,7 +157,6 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="15sp"
                 android:hint="@string/email" />
 
             <TextView
@@ -178,7 +173,6 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="15sp"
                 android:hint="@string/contra1" />
 
             <Button
@@ -187,42 +181,15 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="45dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="70dp"
                 android:backgroundTint="@color/blue2"
                 android:fontFamily="@font/zillaslab"
                 android:text="Reguistrar"
                 android:textSize="20sp" />
 
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/reguistrarse" />
-
-            <ImageView
-                android:id="@+id/imageView13"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="180dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="25dp"
-                app:srcCompat="@mipmap/google" />
-
 
         </LinearLayout>
     </ScrollView>
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.233"
-        app:srcCompat="@drawable/foto" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

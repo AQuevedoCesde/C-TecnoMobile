@@ -18,10 +18,10 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094"
+        app:layout_constraintVertical_bias="0.097"
         tools:ignore="HardcodedText,TextSizeCheck" />
 
     <ImageView
@@ -75,7 +75,7 @@
             app:layout_constraintHorizontal_bias="0.107"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.081"
+            app:layout_constraintVertical_bias="0.108"
             tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
 
         <EditText
@@ -87,10 +87,10 @@
             android:inputType="textEmailAddress"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.569"
+            app:layout_constraintHorizontal_bias="0.581"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.16"
+            app:layout_constraintVertical_bias="0.199"
             tools:ignore="Autofill,TextContrastCheck,TouchTargetSizeCheck" />
 
         <TextView
@@ -102,10 +102,10 @@
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.125"
+            app:layout_constraintHorizontal_bias="0.127"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.29"
+            app:layout_constraintVertical_bias="0.336"
             tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
 
         <EditText
@@ -117,23 +117,25 @@
             android:inputType="textPassword"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.615"
+            app:layout_constraintHorizontal_bias="0.675"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.386"
+            app:layout_constraintVertical_bias="0.444"
             tools:ignore="Autofill,TextContrastCheck" />
 
         <TextView
             android:id="@+id/txtOlvidar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="PasswordResert"
             android:hint="@string/linkrecovery"
+            android:onClick="PasswordResert"
             android:textColorHint="#757575"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.596" />
 
         <Button
             android:id="@+id/btnIngresar"
@@ -145,10 +147,10 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.556"
+            app:layout_constraintHorizontal_bias="0.362"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.626" />
+            app:layout_constraintVertical_bias="0.736" />
 
         <TextView
             android:id="@+id/txtReguistrarse"
@@ -156,57 +158,35 @@
             android:layout_height="wrap_content"
             android:text="aqui"
             android:textColor="@color/blue3"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.578"
+            app:layout_constraintHorizontal_bias="0.63"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.716"
+            app:layout_constraintVertical_bias="0.856"
             tools:ignore="HardcodedText,MissingConstraints" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.577"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.796"
-            app:srcCompat="@drawable/iniciarcon"
-            tools:ignore="ContentDescription,ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="43dp"
-            android:layout_height="48dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.91"
-            app:srcCompat="@mipmap/google" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reguistrate"
+            android:text="Registrate"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.412"
+            app:layout_constraintHorizontal_bias="0.382"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.716" />
+            app:layout_constraintVertical_bias="0.856" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="162dp"
+        android:layout_width="213dp"
 
-        android:layout_height="230dp"
+        android:layout_height="275dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.93"
