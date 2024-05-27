@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ public class Login extends AppCompatActivity {
 
     Button btnIngresar;
     EditText txtUser, txtPassword;
+    TextView txtReguistrarse;
     FirebaseAuth mAuth;
 
 
@@ -33,7 +35,16 @@ public class Login extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         txtUser = findViewById(R.id.txtUser);
         txtPassword = findViewById(R.id.txtPass);
+        txtReguistrarse = findViewById(R.id.txtReguistrarse);
         btnIngresar = findViewById(R.id.btnIngresar);
+
+        txtReguistrarse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),CrearCuenta.class);
+                v.getContext().startActivity(intent);
+            }
+        });
 
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +58,7 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     private void loginUser(String email, String password) {
@@ -72,8 +84,6 @@ public class Login extends AppCompatActivity {
                     }
                 });
     }
-
-
 
 }
 
