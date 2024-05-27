@@ -2,6 +2,7 @@ package com.example.c_tecno_mobile;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -85,5 +85,22 @@ public class Login extends AppCompatActivity {
                 });
     }
 
+    public void PasswordResert(View view) {
+
+        if (TextUtils.isEmpty(txtUser.getText())){
+            Toast.makeText(this,"Introduce un correo",Toast.LENGTH_LONG).show();
+        }else{
+            String email = txtUser.getText().toString();
+            mAuth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(getApplicationContext(),"Te hemos enviado un correo para recuperar tu cuenta",Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+        }
+    }
 }
 
