@@ -15,6 +15,18 @@
         android:theme="@style/Theme.CTecnoMobile"
         tools:targetApi="31">
         <activity
+            android:name=".Reserva"
+            android:exported="false" />
+        <activity
+            android:name=".Accesorios"
+            android:exported="false" />
+        <activity
+            android:name=".Salones"
+            android:exported="false" />
+        <activity
+            android:name=".Computadores"
+            android:exported="false" />
+        <activity
             android:name=".CrearCuenta"
             android:exported="false" />
         <activity
