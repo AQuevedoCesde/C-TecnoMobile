@@ -13,14 +13,48 @@
         tools:ignore="ScrollViewSize">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="357dp"
-            android:layout_height="1055dp"
+            android:layout_width="382dp"
+            android:layout_height="1064dp"
             android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/HorariosFavoritos"
+                android:layout_width="266dp"
+                android:layout_height="122dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.369"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.802">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/favourite"
+                    android:translationX="25dp"
+                    android:translationY="10dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/zillaslab"
+                    android:text="Enterate de los horarios mas reservados."
+                    android:textSize="20dp"
+                    android:translationX="125dp"
+                    android:translationY="10dp"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+            </androidx.cardview.widget.CardView>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
@@ -45,10 +79,10 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.125"
+                    app:layout_constraintHorizontal_bias="0.139"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.19"
+                    app:layout_constraintVertical_bias="0.139"
                     tools:ignore="HardcodedText,TextSizeCheck" />
 
                 <TextView
@@ -62,22 +96,22 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.287"
+                    app:layout_constraintHorizontal_bias="0.279"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.19"
+                    app:layout_constraintVertical_bias="0.139"
                     tools:ignore="HardcodedText,TextSizeCheck" />
 
                 <ImageView
                     android:id="@+id/imageView6"
-                    android:layout_width="121dp"
-                    android:layout_height="120dp"
+                    android:layout_width="161dp"
+                    android:layout_height="145dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintHorizontal_bias="0.784"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.227"
+                    app:layout_constraintVertical_bias="0.136"
                     app:srcCompat="@drawable/logodefinitivo"
                     tools:ignore="ContentDescription" />
 
@@ -91,10 +125,10 @@
                     android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.173"
+                    app:layout_constraintHorizontal_bias="0.15"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.285"
+                    app:layout_constraintVertical_bias="0.243"
                     tools:ignore="HardcodedText" />
 
                 <ImageView
@@ -120,11 +154,11 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.454"
+                    app:layout_constraintHorizontal_bias="0.463"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.507"
-                    tools:ignore="HardcodedText,TextSizeCheck" />
+                    app:layout_constraintVertical_bias="0.435"
+                    tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardComputador"
@@ -138,22 +172,25 @@
                     app:layout_constraintHorizontal_bias="0.198"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.793">
+                    app:layout_constraintVertical_bias="0.706">
 
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:translationY="10dp"
+                        android:src="@drawable/computador"
                         android:translationX="25dp"
-                        android:src="@drawable/computador"/>
+                        android:translationY="10dp"
+                        tools:ignore="ContentDescription" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/zillaslab"
                         android:text="Computadores"
-                        android:translationY="90dp"
-                        android:translationX="8dp"
                         android:textSize="20dp"
-                        android:fontFamily="@font/zillaslab"/>
+                        android:translationX="8dp"
+                        android:translationY="90dp"
+                        tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -166,26 +203,28 @@
                     app:cardElevation="15dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.692"
+                    app:layout_constraintHorizontal_bias="0.718"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.793">
+                    app:layout_constraintVertical_bias="0.706">
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:translationY="10dp"
-                    android:translationX="25dp"
-                    android:src="@drawable/salon"/>
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/salon"
+                        android:translationX="25dp"
+                        android:translationY="10dp"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/zillaslab"
                         android:text="Salones"
-                        android:translationY="90dp"
-                        android:translationX="35dp"
                         android:textSize="20dp"
-                        android:fontFamily="@font/zillaslab"/>
+                        android:translationX="35dp"
+                        android:translationY="90dp"
+                        tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -202,26 +241,28 @@
                 app:cardElevation="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintHorizontal_bias="0.176"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.451">
+                app:layout_constraintVertical_bias="0.409">
 
                 <ImageView
                     android:layout_width="85dp"
                     android:layout_height="85dp"
-                    android:translationY="5dp"
+                    android:src="@drawable/accesorios"
                     android:translationX="20dp"
-                    android:src="@drawable/accesorios"/>
+                    android:translationY="5dp"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/zillaslab"
                     android:text="Accesorios"
-                    android:translationY="90dp"
-                    android:translationX="25dp"
                     android:textSize="20dp"
-                    android:fontFamily="@font/zillaslab"/>
+                    android:translationX="25dp"
+                    android:translationY="90dp"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
 
             </androidx.cardview.widget.CardView>
 
@@ -235,28 +276,113 @@
                 app:cardElevation="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.833"
+                app:layout_constraintHorizontal_bias="0.792"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.468">
+                app:layout_constraintVertical_bias="0.426">
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:translationY="15dp"
+                    android:src="@drawable/calendario"
                     android:translationX="28dp"
-                    android:src="@drawable/calendario"/>
+                    android:translationY="15dp"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/zillaslab"
                     android:text="Reservas"
-                    android:translationY="90dp"
-                    android:translationX="30dp"
                     android:textSize="20dp"
-                    android:fontFamily="@font/zillaslab"/>
+                    android:translationX="30dp"
+                    android:translationY="90dp"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
 
             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/favoritos"
+                android:layout_width="266dp"
+                android:layout_height="122dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.369"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.654">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/deditoarriba"
+                    android:translationX="25dp"
+                    android:translationY="10dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/zillaslab"
+                    android:text="Conoce los Salones y computadores mas utilizados."
+                    android:textSize="20dp"
+                    android:translationX="125dp"
+                    android:translationY="10dp"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/favoritosAcesorios"
+                android:layout_width="266dp"
+                android:layout_height="122dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.369"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.941">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/headphones"
+                    android:translationX="25dp"
+                    android:translationY="10dp"
+                    tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/zillaslab"
+                    android:text="Mira los accesorios mas usados."
+                    android:textSize="20dp"
+                    android:translationX="125dp"
+                    android:translationY="20dp"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zillaslab"
+                android:text="Mas información."
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.436"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.545"
+                tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
