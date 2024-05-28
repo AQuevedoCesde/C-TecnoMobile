@@ -11,4 +11,7 @@
     <string name="emailReguistro">Ingresa tu Email </string>
     <string name="contra1">Ingresa tu contraseña</string>
     <string name="contra2">Repita tu contraseña </string>
+    <string name="computadores">Computadores</string>
+    <string name="salones">Salones</string>
+    <string name="accesorios">Accesorios</string>
 </resources>

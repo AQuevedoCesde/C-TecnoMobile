@@ -7,13 +7,127 @@
     android:layout_height="match_parent"
     tools:context=".Computadores">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cOMPUTADORES"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="383dp"
+        android:layout_height="83dp"
+        android:background="@color/blue2"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="46dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/zillaslab"
+            android:text="Reservar"
+            android:textColor="@color/black"
+            android:translationX="230dp"
+            android:translationY="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="375dp"
+        android:layout_height="63dp"
+        android:background="@color/white"
+        android:elevation="55dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934"
+        tools:ignore="UselessLeaf,VisualLintBounds">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:translationX="10sp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/home"
+                android:translationX="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zillaslab"
+                android:text="Home"
+                android:translationX="8dp"
+                android:translationY="40dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:translationX="45dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:src="@drawable/headphonesicon"
+                android:translationX="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zillaslab"
+                android:text="Mas"
+                android:translationX="12dp"
+                android:translationY="40dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:translationX="90dp">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="40dp"
+                android:src="@drawable/computernetworks"
+                android:translationX="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zillaslab"
+                android:text="Salas"
+                android:translationX="10dp"
+                android:translationY="40dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:translationX="275px">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:src="@drawable/reservado"
+                android:translationX="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zillaslab"
+                android:text="Reserva"
+                android:translationY="40dp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
