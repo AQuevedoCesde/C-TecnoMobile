@@ -184,6 +184,7 @@
                 android:layout_marginBottom="70dp"
                 android:backgroundTint="@color/blue2"
                 android:fontFamily="@font/zillaslab"
+                android:onClick="registrar"
                 android:text="Reguistrar"
                 android:textSize="20sp" />
 
