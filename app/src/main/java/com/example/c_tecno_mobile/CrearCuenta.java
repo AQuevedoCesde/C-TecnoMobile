@@ -56,7 +56,6 @@ public class CrearCuenta extends AppCompatActivity {
         EditText viewtelefono =  (EditText) findViewById(R.id.txtTelefono);
         EditText viewemail =  (EditText) findViewById(R.id.txtEmail);
         EditText viewcontrasena =  (EditText) findViewById(R.id.txtPassOne);
-
         String txNombre = viewnombre.getText().toString();
         String txApellido = viewapellido.getText().toString();
         String txPrograma = viewprograma.getText().toString();
@@ -83,9 +82,10 @@ public class CrearCuenta extends AppCompatActivity {
         firebaseReferencia.set(datosUsuario).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-                mAuth.createUserWithEmailAndPassword(txEmail,txContrasena);
                 Toast.makeText(CrearCuenta.this, "Creado Correctamente",
                         Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CrearCuenta.this, Login.class);
+                startActivity(intent);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

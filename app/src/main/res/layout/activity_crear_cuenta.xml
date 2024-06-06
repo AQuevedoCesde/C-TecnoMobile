@@ -140,6 +140,7 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
+                android:inputType="phone"
                 android:hint="@string/telefono" />
 
 
@@ -157,7 +158,9 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
-                android:hint="@string/email" />
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                />
 
             <TextView
                 android:layout_width="100dp"
@@ -173,7 +176,8 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
-                android:hint="@string/contra1" />
+                android:hint="@string/contra1"
+                android:inputType="textPassword" />
 
             <Button
                 android:id="@+id/btnRegistrar"

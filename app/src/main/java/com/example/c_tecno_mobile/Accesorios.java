@@ -1,10 +1,8 @@
 package com.example.c_tecno_mobile;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +15,7 @@ public class Accesorios extends AppCompatActivity {
     CardView salon;
 
     Cartas Accesorio = new Cartas();
-    Reservas accesorioReservado = new Reservas();
+    Reservas accesorioAReservar = new Reservas();
 
 
     @Override
@@ -25,9 +23,9 @@ public class Accesorios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_accesorios);
-
     }
-    public void cardPc (View v) {
+
+    public void cardPc(View v) {
         Intent intent = new Intent(v.getContext(), Computadores.class);
         v.getContext().startActivity(intent);
     }
@@ -37,95 +35,76 @@ public class Accesorios extends AppCompatActivity {
         v.getContext().startActivity(intent);
     }
 
-    public void Borar(View v) {
-        TextView pcreservado = (TextView) findViewById(R.id.InfResPc);
-        pcreservado.setText("");
+    public void Borrar(View v) {
+        TextView pcReservado = findViewById(R.id.InfResPc);
+        pcReservado.setText("");
     }
 
     public void TerminarReserva(View v) {
-        if ( accesorioReservado.getComputador().isEmpty() ) {
-            Toast.makeText(Accesorios.this, "Ingresa el accesorio " +
-                    "que deseas reservar", Toast.LENGTH_LONG).show();
+        if (accesorioAReservar.getAccesorio().isEmpty()) {
+            Toast.makeText(Accesorios.this, "Ingresa el accesorio que deseas reservar", Toast.LENGTH_LONG).show();
         } else {
-            Intent intent = new Intent(v.getContext(), Reserva.class);
-            v.getContext().startActivity(intent);
+            Intent terminarReserva = new Intent(Accesorios.this, Reserva.class);
+            terminarReserva.putExtra("AccesorioReguistrado", accesorioAReservar.getAccesorio());
+            startActivity(terminarReserva);
+            finish();
         }
     }
 
-    public void getAcce1(View view) {
-        //valores variables
-        TextView Dato1 = (TextView) findViewById(R.id.accName1);
-        TextView Dato2 = (TextView) findViewById(R.id.cone1);
-        TextView Dato3 = (TextView) findViewById(R.id.mark1);
-        TextView Dato4 = (TextView) findViewById(R.id.color1);
+    private void setAccesorioReservado(String dato1, String dato2, String dato3, String dato4) {
+        TextView accReservado = findViewById(R.id.InfResPc);
+        Accesorio.cartas(dato1, dato2, dato3, dato4);
+        accReservado.setText(dato1 + "\n" + dato2 + "\n" + dato3 + "\n" + dato4);
+        accesorioAReservar.setAccesorio(accReservado.getText().toString());
+    }
 
-        //Funcionalidad estatica
-        TextView accReservado = (TextView) findViewById(R.id.InfResPc);
-        Accesorio.cartas(Dato1.getText().toString(), Dato2.getText().toString(),
-                Dato3.getText().toString(),Dato4.getText().toString());
-        accReservado.setText(Accesorio.Dato1 + "\n" + Accesorio.Dato2 + "\n" +
-                Accesorio.Dato3 + "\n" + Accesorio.Dato4);
+    public void getAcce1(View view) {
+        TextView Dato1 = findViewById(R.id.accName1);
+        TextView Dato2 = findViewById(R.id.cone1);
+        TextView Dato3 = findViewById(R.id.mark1);
+        TextView Dato4 = findViewById(R.id.color1);
+
+        setAccesorioReservado(Dato1.getText().toString(), Dato2.getText().toString(), Dato3.getText().toString(), Dato4.getText().toString());
     }
 
     public void getAcce2(View view) {
-        //valores variables
-        TextView Dato1 = (TextView) findViewById(R.id.accName2);
-        TextView Dato2 = (TextView) findViewById(R.id.cone2);
-        TextView Dato3 = (TextView) findViewById(R.id.mark2);
-        TextView Dato4 = (TextView) findViewById(R.id.color2);
+        TextView Dato1 = findViewById(R.id.accName2);
+        TextView Dato2 = findViewById(R.id.cone2);
+        TextView Dato3 = findViewById(R.id.mark2);
+        TextView Dato4 = findViewById(R.id.color2);
 
-        //Funcionalidad estatica
-        TextView accReservado = (TextView) findViewById(R.id.InfResPc);
-        Accesorio.cartas(Dato1.getText().toString(), Dato2.getText().toString(),
-                Dato3.getText().toString(),Dato4.getText().toString());
-        accReservado.setText(Accesorio.Dato1 + "\n" + Accesorio.Dato2 + "\n" +
-                Accesorio.Dato3 + "\n" + Accesorio.Dato4);
+        setAccesorioReservado(Dato1.getText().toString(), Dato2.getText().toString(), Dato3.getText().toString(), Dato4.getText().toString());
     }
 
     public void getAcce3(View view) {
-        //valores variables
-        TextView Dato1 = (TextView) findViewById(R.id.accName3);
-        TextView Dato2 = (TextView) findViewById(R.id.cone3);
-        TextView Dato3 = (TextView) findViewById(R.id.mark3);
-        TextView Dato4 = (TextView) findViewById(R.id.color3);
+        TextView Dato1 = findViewById(R.id.accName3);
+        TextView Dato2 = findViewById(R.id.cone3);
+        TextView Dato3 = findViewById(R.id.mark3);
+        TextView Dato4 = findViewById(R.id.color3);
 
-        //Funcionalidad estatica
-        TextView accReservado = (TextView) findViewById(R.id.InfResPc);
-        Accesorio.cartas(Dato1.getText().toString(), Dato2.getText().toString(),
-                Dato3.getText().toString(),Dato4.getText().toString());
-        accReservado.setText(Accesorio.Dato1 + "\n" + Accesorio.Dato2 + "\n" +
-                Accesorio.Dato3 + "\n" + Accesorio.Dato4);
+        setAccesorioReservado(Dato1.getText().toString(), Dato2.getText().toString(), Dato3.getText().toString(), Dato4.getText().toString());
     }
 
     public void getAcce4(View view) {
-        //valores variables
-        TextView Dato1 = (TextView) findViewById(R.id.accName4);
-        TextView Dato2 = (TextView) findViewById(R.id.cone4);
-        TextView Dato3 = (TextView) findViewById(R.id.mark4);
-        TextView Dato4 = (TextView) findViewById(R.id.color4);
+        TextView Dato1 = findViewById(R.id.accName4);
+        TextView Dato2 = findViewById(R.id.cone4);
+        TextView Dato3 = findViewById(R.id.mark4);
+        TextView Dato4 = findViewById(R.id.color4);
 
-        //Funcionalidad estatica
-        TextView accReservado = (TextView) findViewById(R.id.InfResPc);
-        Accesorio.cartas(Dato1.getText().toString(), Dato2.getText().toString(),
-                Dato3.getText().toString(),Dato4.getText().toString());
-        accReservado.setText(Accesorio.Dato1 + "\n" + Accesorio.Dato2 + "\n" +
-                Accesorio.Dato3 + "\n" + Accesorio.Dato4);
+        setAccesorioReservado(Dato1.getText().toString(), Dato2.getText().toString(), Dato3.getText().toString(), Dato4.getText().toString());
     }
 
     public void getAcce5(View view) {
-        //valores variables
-        TextView Dato1 = (TextView) findViewById(R.id.accName5);
-        TextView Dato2 = (TextView) findViewById(R.id.cone5);
-        TextView Dato3 = (TextView) findViewById(R.id.mark5);
-        TextView Dato4 = (TextView) findViewById(R.id.color5);
+        TextView Dato1 = findViewById(R.id.accName5);
+        TextView Dato2 = findViewById(R.id.cone5);
+        TextView Dato3 = findViewById(R.id.mark5);
+        TextView Dato4 = findViewById(R.id.color5);
 
-        //Funcionalidad estatica
-        TextView accReservado = (TextView) findViewById(R.id.InfResPc);
-        Accesorio.cartas(Dato1.getText().toString(), Dato2.getText().toString(),
-                Dato3.getText().toString(),Dato4.getText().toString());
-        accReservado.setText(Accesorio.Dato1 + "\n" + Accesorio.Dato2 + "\n" +
-                Accesorio.Dato3 + "\n" + Accesorio.Dato4);
+        setAccesorioReservado(Dato1.getText().toString(), Dato2.getText().toString(), Dato3.getText().toString(), Dato4.getText().toString());
     }
 
-
+    public void Home(View v) {
+        Intent acc = new Intent(v.getContext(), PaginaPrincipal.class);
+        v.getContext().startActivity(acc);
+    }
 }
