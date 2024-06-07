@@ -110,42 +110,20 @@
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView4"
-            android:layout_width="70dp"
-            android:layout_height="80dp"
-            app:cardCornerRadius="10dp"
-            android:background="@drawable/bordebotones"
-            android:onClick="cardPc"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.611"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.351">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/computador"
-                android:translationX="10dp" />
-
-        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView3"
             android:layout_width="70dp"
             android:layout_height="80dp"
-            app:cardCornerRadius="10dp"
-            android:layout_marginStart="20dp"
             android:background="@drawable/bordebotones"
             android:onClick="cardAccesorios"
+            app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/cardView4"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.351">
+            app:layout_constraintVertical_bias="0.444">
 
             <ImageView
                 android:layout_width="45dp"
@@ -154,12 +132,10 @@
                 android:translationX="12dp" />
         </androidx.cardview.widget.CardView>
 
-
-
         <androidx.cardview.widget.CardView
+            android:layout_width="33dp"
+            android:layout_height="44dp"
             android:onClick="Borrar"
-            android:layout_width="37dp"
-            android:layout_height="46dp"
             app:cardCornerRadius="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

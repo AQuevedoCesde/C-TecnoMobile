@@ -167,66 +167,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="37dp"
-        android:layout_height="46dp"
-        android:onClick="accesorios"
-        app:cardCornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.281">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pencil"
-            android:translationX="5dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="37dp"
-        android:layout_height="46dp"
-        android:onClick="salas"
-        app:cardCornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.628"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pencil"
-            android:translationX="5dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="37dp"
-        android:layout_height="46dp"
-        android:onClick="pc"
-        app:cardCornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pencil"
-            android:translationX="5dp" />
-
-    </androidx.cardview.widget.CardView>
-
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"

@@ -14,9 +14,10 @@ public class Salones extends AppCompatActivity {
     CardView salon;
 
     Cartas salones = new Cartas();
-    Reservas pcReservado = new Reservas();
     Reservas SalonReservado = new Reservas();
-    Reservas accesorioAReservar = new Reservas();
+    String ReservaPc;
+    String ReservaAcc;
+    String ReservaSalon;
 
 
     @Override
@@ -24,21 +25,28 @@ public class Salones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_salones);
-    }
 
-    public void cardPc(View v) {
-        Intent pc = new Intent(v.getContext(), Computadores.class);
-        v.getContext().startActivity(pc);
+        ReservaPc = getIntent().getStringExtra("ComputadorRegistrado");
+        ReservaAcc = getIntent().getStringExtra("AccesorioRegistrado");
+        ReservaSalon = getIntent().getStringExtra("SalonRegistrado");
+
+
+        TextView pcReservado = findViewById(R.id.InfReserva);
+        pcReservado.setText(ReservaAcc);
+
     }
 
     public void cardAccesorios(View v) {
         Intent acc = new Intent(v.getContext(), Accesorios.class);
+        acc.putExtra("ComputadorRegistrado", ReservaPc );
+        acc.putExtra("SalonRegistrado", SalonReservado.getSalon());
+        acc.putExtra("AccesorioRegistrado", ReservaAcc);
         v.getContext().startActivity(acc);
     }
 
-    public void Borrar(View view) {
-        TextView pcReservado = findViewById(R.id.InfResPc);
-        pcReservado.setText("");
+    public void Borrar(View v) {
+        TextView pcReservado = findViewById(R.id.InfReserva);
+        pcReservado.setText(ReservaPc);
     }
 
     public void TerminarReserva(View v) {
@@ -46,7 +54,10 @@ public class Salones extends AppCompatActivity {
             Toast.makeText(Salones.this, "Ingresa el salón que deseas reservar", Toast.LENGTH_LONG).show();
         } else {
             Intent terminarReserva = new Intent(Salones.this, Reserva.class);
-            terminarReserva.putExtra("SalonReguistrado", SalonReservado.getSalon());
+            terminarReserva.putExtra("SalonRegistrado", SalonReservado.getSalon());
+            terminarReserva.putExtra("ComputadorRegistrado", ReservaPc );
+            terminarReserva.putExtra("AccesorioRegistrado", ReservaAcc);
+
             startActivity(terminarReserva);
             finish();
 
@@ -109,4 +120,8 @@ public class Salones extends AppCompatActivity {
         Intent acc = new Intent(v.getContext(), PaginaPrincipal.class);
         v.getContext().startActivity(acc);
     }
+
+
+
+
 }

@@ -15,6 +15,9 @@ public class Computadores extends AppCompatActivity {
 
     Cartas pc = new Cartas();
     Reservas pcReservado = new Reservas();
+    String ReservaSalon;
+    String ReservaAcc;
+    String ReservaPc;
 
 
     @Override
@@ -22,16 +25,24 @@ public class Computadores extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_computadores);
+
+        ReservaSalon = getIntent().getStringExtra("SalonRegistrado");
+        ReservaAcc = getIntent().getStringExtra("AccesorioRegistrado");
+        ReservaPc = getIntent().getStringExtra("ComputadorRegistrado");
+
+        TextView pcReservado = findViewById(R.id.InfResPc);
+        pcReservado.setText(ReservaPc);
+
+
     }
 
     public void cardSalones(View v) {
         Intent salones = new Intent(v.getContext(), Salones.class);
-        v.getContext().startActivity(salones);
-    }
+        salones.putExtra("ComputadorRegistrado", pcReservado.getComputador());
+        salones.putExtra("SalonRegistrado", ReservaSalon);
+        salones.putExtra("AccesorioRegistrado", ReservaAcc);
 
-    public void cardAccesorios(View v) {
-        Intent acc = new Intent(v.getContext(), Accesorios.class);
-        v.getContext().startActivity(acc);
+        v.getContext().startActivity(salones);
     }
 
     public void Borrar(View view) {
@@ -45,6 +56,9 @@ public class Computadores extends AppCompatActivity {
         } else {
             Intent terminarReserva = new Intent(Computadores.this, Reserva.class);
             terminarReserva.putExtra("ComputadorRegistrado", pcReservado.getComputador());
+            terminarReserva.putExtra("SalonRegistrado", ReservaSalon);
+            terminarReserva.putExtra("AccesorioRegistrado", ReservaAcc);
+
             startActivity(terminarReserva);
             finish();
         }
@@ -107,4 +121,6 @@ public class Computadores extends AppCompatActivity {
         Intent acc = new Intent(v.getContext(), PaginaPrincipal.class);
         v.getContext().startActivity(acc);
     }
+
+
 }

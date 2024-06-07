@@ -14,16 +14,33 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Reserva extends AppCompatActivity {
 
+    private static final String RESERVADOPC = "Computador" ;
+    private static final String RESERVADOSALON = "Salon";
+    private static final String RESERVADOACC = "Accesorio";
+    private static final String RESERVAFECHA = "Fecha";
+    private static final String RESERVAHORA = "Hora";
     TextView accReservadoView , SalaReservadaView, pcReservadoView;
     String ReservaAcc;
     String ReservaSalon;
     String ReservaPc;
 
+
     EditText fechareserva,horareserva ;
+    String randomId = java.util.UUID.randomUUID().toString();
+    private DocumentReference firebaseReferencia = FirebaseFirestore.getInstance().collection("reservas").document(randomId);
 
 
     @SuppressLint("MissingInflatedId")
@@ -37,12 +54,13 @@ public class Reserva extends AppCompatActivity {
         horareserva = findViewById(R.id.horareserva);
         ImageView btnfechareserva = findViewById(R.id.btnfechareserva);
         ImageView btnhorareserva = findViewById(R.id.btnhorareserva);
+
         accReservadoView = findViewById(R.id.accReservado);
         SalaReservadaView = findViewById(R.id.SalonReservado);
         pcReservadoView = findViewById(R.id.pcReservado);
 
-        ReservaAcc = getIntent().getStringExtra("AccesorioReguistrado");
-        ReservaSalon = getIntent().getStringExtra("SalonReguistrado");
+        ReservaAcc = getIntent().getStringExtra("AccesorioRegistrado");
+        ReservaSalon = getIntent().getStringExtra("SalonRegistrado");
         ReservaPc = getIntent().getStringExtra("ComputadorRegistrado");
 
         accReservadoView.setText(ReservaAcc);
@@ -88,23 +106,36 @@ public class Reserva extends AppCompatActivity {
     }
 
     public void reservado(View v) {
-        Toast.makeText(this, "Reserva Guardada", Toast.LENGTH_LONG).show();
-        Intent acc = new Intent(v.getContext(), PaginaPrincipal.class);
-        v.getContext().startActivity(acc);
-    }
+        String ReservaPcFb = pcReservadoView.getText().toString();
+        String ReservaslFb = SalaReservadaView.getText().toString();
+        String ReservaaccFb = accReservadoView.getText().toString();
+        String Fecha = fechareserva.getText().toString() ;
+        String Hora = horareserva.getText().toString();
 
-    public void accesorios(View v) {
-        Intent acc = new Intent(v.getContext(), Accesorios.class);
-        v.getContext().startActivity(acc);
-    }
 
-    public void pc(View v) {
-        Intent acc = new Intent(v.getContext(), Computadores.class);
-        v.getContext().startActivity(acc);
-    }
+        Map<String,Object> datosReserva = new HashMap<>();
+        datosReserva.put(RESERVADOPC, ReservaPcFb);
+        datosReserva.put(RESERVADOSALON, ReservaslFb);
+        datosReserva.put(RESERVADOACC, ReservaaccFb);
+        datosReserva.put(RESERVAFECHA, Fecha);
+        datosReserva.put(RESERVAHORA, Hora);
 
-    public void salas(View v) {
-        Intent acc = new Intent(v.getContext(), Salones.class);
-        v.getContext().startActivity(acc);
+        firebaseReferencia.set(datosReserva).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Toast.makeText(Reserva.this, "Reserva Guardada",
+                        Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Reserva.this, PaginaPrincipal.class);
+                startActivity(intent);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(Reserva.this, "Error en la reserva ",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 }

@@ -16,6 +16,9 @@ public class Accesorios extends AppCompatActivity {
 
     Cartas Accesorio = new Cartas();
     Reservas accesorioAReservar = new Reservas();
+    String ReservaPc ;
+    String ReservaSalon;
+    String ReservaAcc;
 
 
     @Override
@@ -23,21 +26,28 @@ public class Accesorios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_accesorios);
+
+        ReservaPc = getIntent().getStringExtra("ComputadorRegistrado");
+        ReservaSalon = getIntent().getStringExtra("SalonRegistrado");
+        ReservaAcc = getIntent().getStringExtra("AccesorioRegistrado");
+
+        TextView pcReservado = findViewById(R.id.InfResPc);
+        pcReservado.setText(ReservaAcc);
+
     }
 
     public void cardPc(View v) {
         Intent intent = new Intent(v.getContext(), Computadores.class);
-        v.getContext().startActivity(intent);
-    }
+        intent.putExtra("ComputadorRegistrado", ReservaPc );
+        intent.putExtra("SalonRegistrado", ReservaSalon);
+        intent.putExtra("AccesorioRegistrado", accesorioAReservar.getAccesorio());
 
-    public void cardSalones(View v) {
-        Intent intent = new Intent(v.getContext(), Salones.class);
         v.getContext().startActivity(intent);
     }
 
     public void Borrar(View v) {
         TextView pcReservado = findViewById(R.id.InfResPc);
-        pcReservado.setText("");
+        pcReservado.setText(ReservaSalon);
     }
 
     public void TerminarReserva(View v) {
@@ -45,7 +55,10 @@ public class Accesorios extends AppCompatActivity {
             Toast.makeText(Accesorios.this, "Ingresa el accesorio que deseas reservar", Toast.LENGTH_LONG).show();
         } else {
             Intent terminarReserva = new Intent(Accesorios.this, Reserva.class);
-            terminarReserva.putExtra("AccesorioReguistrado", accesorioAReservar.getAccesorio());
+            terminarReserva.putExtra("AccesorioRegistrado", accesorioAReservar.getAccesorio());
+            terminarReserva.putExtra("ComputadorRegistrado", ReservaPc );
+            terminarReserva.putExtra("SalonRegistrado", ReservaSalon);
+
             startActivity(terminarReserva);
             finish();
         }
