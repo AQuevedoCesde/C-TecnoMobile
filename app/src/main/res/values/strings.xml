@@ -14,4 +14,6 @@
     <string name="computadores">Computadores</string>
     <string name="salones">Salones</string>
     <string name="accesorios">Accesorios</string>
+    <string name="fechareserva">Fecha</string>
+    <string name="horaeserva">Hora</string>
 </resources>

@@ -5,6 +5,7 @@ public class Reservas {
     String Salon;
     String accesorio;
 
+
     public Reservas() {
         Computador = "";
         Salon = "";
